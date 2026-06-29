@@ -1,68 +1,108 @@
-# Godfred Akyianu – Portfolio Website
+Godfred Akyianu Portfolio Website
+🌐 Overview
+This is my personal portfolio website showcasing my background, skills, and projects as a full‑stack software developer.
+The site includes a hero section with a background video, a slideshow highlighting my technical skills, an about section, a GitHub showcase, and a fully functional contact form powered by Formspree.
 
-Welcome to my personal portfolio website, hosted at **https://gakyianu.github.io**.
+The project is built using HTML, CSS, and JavaScript, with a clean folder structure and responsive layout.
 
-This site showcases my background, skills, and projects as a software developer.  
-It includes sections for my About information, GitHub profile, and a contact form powered by Formspree.
-
----
-
-## 🔹 Features
-
-- Clean, responsive layout  
-- Fixed navigation bar  
-- Background video header  
-- About section with profile image  
-- GitHub section with external link  
-- Contact form (Formspree integration)  
-- Fully deployed using GitHub Pages  
-
----
-
-## 🔹 Technologies Used
-
-- **HTML5**  
-- **CSS3**  
-- **JavaScript (minimal)**  
-- **Google Fonts (Poppins & Montserrat)**  
-- **GitHub Pages** for hosting  
-
----
-
-## 🔹 File Structure
-
-```
-GAkyianu.github.io/
+📁 Project Structure
+Code
+PORTFOLIO/
+│ index.html
+│ Typing1.mp4
 │
-├── index.html
-├── Typing1.mp4
-├── images/
-│   └── godfred.jpg
+├── JS/
+│   └── myportfolio.js
+│
 ├── stylesheet/
 │   └── myportfolio.css
-```
+│
+└── images/
+    ├── Custom Picture.jpg
+    ├── Square godfred.jpg
+    ├── Square Custom Picture (2).png
+    ├── HTML_CSS_and_JavaScript.jpeg
+    ├── Python.png
+    ├── C_Sharp_and_Dot_NET.png
+    ├── SQL_and_Database.jpg
+    ├── GitHub.png
+    └── favicon.ico
+🎨 Features
+🔹 Hero Section
+Full‑width background video (Typing1.mp4)
+
+Gradient overlay
+
+Animated text introduction and quote
+
+🔹 Slideshow
+Six slides showcasing my skills
+
+Custom navigation arrows
+
+Clickable dots for slide selection
+
+Smooth fade animation
+
+🔹 About Section
+Personal introduction
+
+Link to The Tech Academy
+
+Contact link opening the popup form
+
+🔹 GitHub Section
+Direct link to my GitHub profile
+
+GitHub logo image
+
+🔹 Contact Form
+Popup form with Name, Phone, Email, and Message fields
+
+Formspree integration for submissions
+
+Click‑outside‑to‑close functionality
+
+🛠️ Technologies Used
+Frontend
+HTML5
+
+CSS3
+
+JavaScript (Vanilla)
+
+Styling
+Google Fonts (Poppins, Montserrat)
+
+Custom animations
+
+Responsive design adjustments
+
+Tools
+Visual Studio Code
+
+GitHub Pages (for hosting)
+
+🚀 How to View the Website
+You can view the live version of the portfolio here:
+
+👉 https://GAkyianu.github.io
+
+(If not deployed yet, enable GitHub Pages in your repo settings under “Pages” and select the main branch.)
+
+📬 Contact
+If you’d like to get in touch, you can use the contact form on the site or reach me directly through:
+
+GitHub: https://github.com/GAkyianu
+
+LinkedIn: https://www.linkedin.com/in/godfred-akyianu-a45777309
+
+📄 License
+This project is for personal portfolio use.
+Feel free to explore the code, but please do not copy the design or content without permission.
 
 
----
 
-## 🔹 Live Website
-
-👉 **https://gakyianu.github.io**
-
----
-
-## 🔹 About This Project
-
-This portfolio was built to highlight my work, skills, and experience as a developer.  
-It is designed to be simple, elegant, and easy to navigate.
-
----
-
-## 🔹 Contact
-
-If you’d like to get in touch, use the contact form on the website or reach out via GitHub:
-
-**https://github.com/GAkyianu**
 
 
 
