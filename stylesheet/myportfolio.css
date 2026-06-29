@@ -1,123 +1,113 @@
-/********************************************
- * PORTFOLIO STYLESHEET
- * Author: Godfred
- * Description: Global styles, typography,
- *              layout, navbar, animations.
- ********************************************/
+/***** GLOBAL STYLING *****/
 
-/**** GENERAL STYLING ****/
-/* Body */
 body {
-    margin: 0%;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: 1.5vw;
+    letter-spacing: .2vw;
 }
 
-/* Heading elements */
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
-/* Font size hierarchy */
-h1 { font-size: 42px; }
-h2 { font-size: 32px; }
-h3 { font-size: 26px; }
+:root {
+    --primary: #1e90ff;
+    --accent: #0b3d91;
+    --text-light: #ffffff;
+    --text-dark: #222222;
+}
 
-/* Additional h1 styling */
+html {
+    scroll-behavior: smooth;
+}
+
+body.fade-out {
+    opacity: 1;
+}
+
 h1 {
     text-transform: uppercase;
+    font-family: "Trebuchet MS", Optima;
     text-align: center;
     margin-top: 3%;
     color: #1a1a1a;
-}
-
-/* h1 hover effect */
-h1:hover {
-    filter: grayscale(5%);
-    transform: scale(1.1);
     transition: transform 1s;
 }
 
-/* Portfolio title text */
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+}
+
 .white-text {
     color: #fff;
 }
 
-/* Paragraph elements */
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: Perpetua, Rockwell Extra Bold;
     text-align: justify;
-    letter-spacing: 1px;
-    font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    letter-spacing: .1vw;
+    font-size: 2.5vw;
+    padding: 0 1vw;
+    transition: transform 1s;
 }
 
-/* Paragraph hover effect */
 p:hover {
-    transition: transform 1s;
     transform: scale(1.01);
 }
 
-/* Center class */
 .center {
     text-align: center;
+}
+
+.center:hover,
+.center:hover p,
+.center:hover q,
+.center:hover a {
+    color: blue;
     transition: 0.4s ease;
 }
 
-.center:hover {
-    color: blue;
-    transform: scale(1.08);
-}
-
-/* Anchor elements */
 a {
     color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: 0.3s ease;
 }
 
-/* Quotation elements */
+a:hover {
+    color: var(--primary);
+}
+
 q {
     font-style: italic;
 }
 
-/* Image elements */
 img {
     filter: grayscale(75%);
     border-radius: 8px;
     max-width: 100%;
-    height: 340px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    transition: filter 0.4s ease;
 }
 
-/* Image hover effect */
 img:hover {
     filter: grayscale(5%);
-    transition: transform 1s;
-    transform: scale(1.1);
 }
 
-/* Responsive image adjustments */
-@media screen and (max-width: 576px) {
-    img {
-        height: 100px;
-        margin-top: 150px;
-    }
-}
-
-/* Footer */
 footer {
     padding: 2%;
     background-color: white;
 }
-/**** END OF GENERAL STYLING ****/
 
+/***** NAVBAR *****/
 
-/**** NAVBAR STYLING ****/
 .Navbar {
     overflow: hidden;
-    background-color: black;
+    background-color: var(--accent);
     position: fixed;
     top: 0;
     width: 100%;
@@ -125,179 +115,293 @@ footer {
     animation: moveNav 5s;
 }
 
-/* Navbar slide-in animation */
 @keyframes moveNav {
     from { left: -100vw; }
-    to { left: 0vw; }
+    to { left: 0; }
 }
 
-/* Navbar links */
 .Navbar a {
     float: left;
     display: block;
-    color: white;
-    padding: 14px 16px;
+    color: var(--text-light);
+    padding: .75vw 1vw;
     text-decoration: none;
-
-    /* Modernised navbar typography */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw;
     text-align: center;
     position: relative;
     animation: moveNavText 5.75s;
+    transition: 0.3s ease;
 }
 
-/* Navbar text animation */
 @keyframes moveNavText {
     from { top: -100vw; }
-    to { top: 0vw; }
+    to { top: 0; }
 }
 
-/* Responsive navbar */
-@media screen and (max-width: 576px) {
-    .Navbar a {
-        width: 25%;
-        font-size: 12px;
-    }
-}
-
-/* Navbar hover */
 .Navbar a:hover {
-    background-color: #f4f4f4;
-    color: black;
+    background-color: var(--primary);
+    color: var(--text-light);
     font-weight: bold;
 }
 
-/* Active navbar link */
 .Navbar a.active {
     background-color: darkgray;
 }
-/**** END OF NAVBAR STYLING ****/
 
+/***** HERO SECTION *****/
 
-/**** VIDEO STYLING ****/
-#Typing1_Video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    z-index: -1;
-}
-
-/* Hide video on small screens */
-@media screen and (max-width: 576px) {
-    #Typing1_Video {
-        display: none;
-    }
-}
-
-/* Text overlay on video */
-.Video_Text {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    width: 100%;
-    padding: 20px;
+.Hero_Section {
     position: relative;
-    animation: moveVideoText 5.75s;
+    width: 100%;
+    overflow: hidden;
 }
 
-/* Video text animation */
-@keyframes moveVideoText {
-    from { top: -100vw; }
-    to { top: 0vw; }
+.Hero_Section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.7)
+    );
+    z-index: 0;
 }
-/**** END OF VIDEO STYLING ****/
 
+#Typing1_Video {
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(85%);
+}
 
-/**** TABLE STYLING ****/
+.Video_Text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--text-light);
+    z-index: 1;
+    width: 80%;
+    animation: fadeInHero 1.5s ease-out;
+}
+
+@keyframes fadeInHero {
+    from { opacity: 0; transform: translate(-50%, -40%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/***** SLIDESHOW *****/
+
+#Slideshow_Background {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.mySlides {
+    display: none;
+}
+
+#Slideshow_Container {
+    width: 39.5vw;
+    margin: auto;
+    padding-top: 4%;
+    position: relative;
+}
+
+.Slideshow_Images {
+    width: 100%;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    transition: transform 0.4s ease;
+}
+
+.Slideshow_Images:hover {
+    transform: scale(1.03);
+}
+
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 2vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1.5vw;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+.Next {
+    right: 0;
+}
+
+.Previous:hover, .Next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    font-weight: bold;
+    border-radius: 0 0 7px 7px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover,
+.dot.active {
+    background-color: black;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4; }
+    to { opacity: 1; }
+}
+
+/***** COLUMNS *****/
+
 * {
     box-sizing: border-box;
 }
 
-.Column_1 {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    padding-top: 3%;
-    height: 400px;
-    background-color: #f2f2f2;
-}
-
-@media screen and (max-width: 576px) {
-    .Column_1 {
-        overflow: auto;
-    }
-}
-
+.Column_1,
 .Column_2 {
     float: left;
     width: 50%;
-    padding: 10px;
-    padding-top: 1.9%;
-    height: 400px;
+    padding: 1.6%;
+    min-height: 450px;
+}
+
+.Column_1 {
+    background-color: #f2f2f2;
+}
+
+.Column_2 {
     background-color: #4d4d4d;
 }
 
-/* Taller columns for contact section */
-.Column_tall {
-    padding-top: 3.5%;
-    height: 450px;
-}
-
-/* Clear floats */
 .Row:after {
     content: "";
     display: table;
     clear: both;
 }
-/**** END OF TABLE STYLING ****/
 
+/***** CONTACT FORM *****/
 
-/**** CONTACT FORM STYLING ****/
-input[type=text] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    font-family: Perpetua, Rockwell Extra Bold;
-}
-
-input[type=text]:hover {
-    box-shadow: 0 0 5px #00004d inset;
-}
-
-input[type=submit] {
-    background-color: black;
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Perpetua, Rockwell Extra Bold;
-}
-
-input[type=submit]:hover {
+.Pop_Up_Button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
     background-color: white;
     color: black;
-    transform: scale(1.5);
-    transition: transform 1.5s;
+    border: solid black;
+    cursor: pointer;
+    animation: movePopup 5s;
 }
 
-form {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 10px;
+@keyframes movePopup {
+    from { right: -40vw; }
+    to { right: 1.75vw; }
+}
+
+.form-popup {
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+}
+
+.form-container {
+    max-width: 49vw;
+    padding: 1vw;
+    background-color: white;
+}
+
+.form-container input[type=text] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0;
+    border: none;
+    background: Gainsboro;
+    font-size: 1vw;
+}
+
+button {
     font-family: "Trebuchet MS", Optima;
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s ease;
 }
-/**** END OF CONTACT FORM STYLING ****/
 
+button:hover {
+    background-color: var(--primary);
+    color: var(--text-light);
+    transform: scale(1.05);
+}
+
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+.form-container .btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+.form-container .cancel:hover {
+    background-color: darkred;
+}
+
+/***** MEDIA QUERIES *****/
+
+@media screen and (max-width: 1080px) {
+    .Navbar a {
+        width: 20%;
+        font-size: 2.5vw;
+    }
+
+    .white-text {
+        font-size: 4.5vw;
+    }
+}
